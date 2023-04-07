@@ -3,6 +3,7 @@
     {{#with program}}
       {{#with excursion}}
         <h1>{{name}}</h1>
+        <hr />
         {{#with location}}
           <h3>{{city}}, {{country}}</h3>
         {{/with}}
@@ -11,6 +12,7 @@
           <h3>Program:</h3>
           <dir>
             {{#each program}}
+              <hr />
               <li>
                 <b>{{name}}</b>
                 ({{type}})
