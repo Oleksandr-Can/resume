@@ -6,8 +6,7 @@
           {{#with main}}
             <h1>{{title}}</h1>
             <br />
-            <h6 class='text-secondary'>{{text}}</h6>
-            <br />
+            <p>{{text}}</p>
             {{#with button_text}}
               <button
                 class='btn btn-primary'
@@ -30,8 +29,7 @@
           {{#with second}}
             <h2>{{title}}</h2>
             <br />
-            <h6 class='text-secondary'>{{text}}</h6>
-            <br />
+            <p>{{text}}</p>
             {{#with button_text}}
               <button
                 class='btn btn-secondary'
@@ -54,8 +52,7 @@
           {{#with subblock}}
             <h3>{{title}}</h3>
             <br />
-            <h6 class='text-secondary'>{{text}}</h6>
-            <br />
+            <p>{{text}}</p>
             {{#with button_text}}
               <button
                 class='btn btn-dark'
@@ -84,8 +81,7 @@
               {{#with children_display}}
                 <div class='display-4'>{{title}}</div>
                 <br />
-                <h6 class='text-secondary'>{{text}}</h6>
-                <br />
+                <p>{{text}}</p>
                 <button
                   class='btn btn-outline-warning'
                 >{{button.text}}</button>
@@ -107,10 +103,8 @@
 
   <section>
     {{#with paragraph}}
-      <div class='text-uppercase'>{{title}}</div>
-      <br />
-      <div class='text-lowercase'>{{text}}</div>
-      <br />
+      <p class='text-uppercase'>{{title}}</p>
+      <p class='text-lowercase'>{{text}}</p>
       <form action='{{button.url}}' target='_blank'>
         <button
           class='btn btn-link'
