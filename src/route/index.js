@@ -652,7 +652,6 @@ router.get('/web', function (req, res) {
 })
 
 // ================================================================
-/ ================================================================
 
 // router.get Створює нам один ентпоїнт
 
@@ -661,8 +660,7 @@ router.get('/mac', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('mac', {
-
-    layout ="basic",
+    layout: 'basic',
     name: 'Apple MacBook Pro',
     description: 'The ultimate notebook for power users',
     price: 1999.99,
