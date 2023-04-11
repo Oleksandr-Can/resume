@@ -1,0 +1,24 @@
+{{!-- {{#unless group}} --}}
+{{!-- <b>Groups:</b> --}}
+<dir>
+    <ul>
+        {{#each groups}}        
+            <li>
+                <b>#</b> - {{id}}
+                <br>
+                <b>description:</b>
+                - {{description}}
+                <br>
+                <b>members:</b>
+                <ul>
+                    {{#each members}}
+                        <li>
+                            {{>idname}}
+                        </li>
+                    {{/each}}
+                </ul>
+            </li>
+        {{/each}}
+    </ul>
+</dir>
+{{!-- {{/unless}} --}}

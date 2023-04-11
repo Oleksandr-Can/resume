@@ -1,0 +1,47 @@
+<div>
+  <section>
+    <h2>{{name}}</h2>
+    <hr />
+  </section>
+  <dir>
+    <ul>
+        {{#each users}}
+        <li>
+            {{> idname}}          
+            <b>Friends:</b>
+            <dir>
+                <ul>
+                    {{#each friends}}  
+                        <li>         
+                            {{> idname}}
+                            <b>mutual friends:</b>
+                            <dir>
+                                <ul>
+                                    {{#each mutual_friends}}
+                                    <li>
+                                        {{> idname}}
+                                        <b>mutual friends:</b>
+                                        <dir>
+                                            <ul>
+                                                {{#each mutual_friends}}
+                                                <li>
+                                                    {{> idname}}
+                                                </li>
+                                                {{/each}}
+                                            </ul>
+                                        </dir>
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                            </dir> 
+                        </li>                            
+                    {{/each}}
+                </ul>
+            </dir>        
+            <b>Groups:</b>     
+            {{> group}}            
+        </li>
+        {{/each}}
+    </ul>
+  </dir>
+</div>
