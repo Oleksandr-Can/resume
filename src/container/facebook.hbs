@@ -7,37 +7,41 @@
     <ul>
         {{#each users}}
         <li>
-            {{> idname}}          
+            {{> idname}} 
+            <br>         
             <b>Friends:</b>
-            <dir>
+            
                 <ul>
                     {{#each friends}}  
                         <li>         
                             {{> idname}}
+                            <br>
                             <b>mutual friends:</b>
-                            <dir>
+                            
                                 <ul>
                                     {{#each mutual_friends}}
                                     <li>
                                         {{> idname}}
-                                        <b>mutual friends:</b>
-                                        <dir>
+                                        <br>
+                                        {{!-- <b>mutual friends:</b> --}}
+                                        
                                             <ul>
                                                 {{#each mutual_friends}}
+                                                <b>mutual friends:</b>
                                                 <li>
                                                     {{> idname}}
                                                 </li>
                                                 {{/each}}
                                             </ul>
-                                        </dir>
+                                        
                                     </li>
                                     {{/each}}
                                 </ul>
-                            </dir> 
+                            
                         </li>                            
                     {{/each}}
                 </ul>
-            </dir>        
+                   
             <b>Groups:</b>     
             {{> group}}            
         </li>
