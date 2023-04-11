@@ -9,22 +9,19 @@
         <li>
             {{> idname}} 
             <br>         
-            <b>Friends:</b>
-            
+            <b>Friends:</b>            
                 <ul>
                     {{#each friends}}  
                         <li>         
                             {{> idname}}
                             <br>
-                            <b>mutual friends:</b>
-                            
+                            <b>mutual friends:</b>                            
                                 <ul>
                                     {{#each mutual_friends}}
                                     <li>
                                         {{> idname}}
                                         <br>
-                                        {{!-- <b>mutual friends:</b> --}}
-                                        
+                                        {{!-- <b>mutual friends:</b> --}}                                        
                                             <ul>
                                                 {{#each mutual_friends}}
                                                 <b>mutual friends:</b>
@@ -32,16 +29,13 @@
                                                     {{> idname}}
                                                 </li>
                                                 {{/each}}
-                                            </ul>
-                                        
+                                            </ul>                                        
                                     </li>
                                     {{/each}}
-                                </ul>
-                            
+                                </ul>                            
                         </li>                            
                     {{/each}}
-                </ul>
-                   
+                </ul>                   
             <b>Groups:</b>     
             {{> group}}            
         </li>
