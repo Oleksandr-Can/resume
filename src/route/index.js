@@ -663,6 +663,7 @@ router.get('/bootstrap', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('bootstrap', {
+
     layout: 'bootstrap',
   })
   //                  ↑↑ сюди вводимо JSON дані
@@ -740,6 +741,9 @@ router.get('/task21', function (req, res) {
         },
       ],
     },
+
+    layout: 'basic',
+
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
