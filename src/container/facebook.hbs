@@ -10,7 +10,7 @@
             {{> idname}} 
             <br>         
             <b>Friends:</b>            
-                <ul>
+                {{!-- <ul> --}}
                     {{#each friends}}  
                         <li>         
                             {{> idname}}
@@ -33,10 +33,16 @@
                                 {{/each}}
                             </ul>                            
                         </li>
-                        {{!-- {{> group}}                              --}}
+                        {{!-- {{> group}}             --}}
+                        
                     {{/each}}
-                </ul>            
-            {{> group}}            
+                {{!-- </ul>                 --}}
+            {{#each friends}}
+            {{> group}}                 
+            {{/each}}
+            
+            {{> group}} 
+            <br>           
         </li>
         {{/each}}
     </ul>
