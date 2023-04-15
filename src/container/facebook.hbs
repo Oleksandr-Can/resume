@@ -16,27 +16,26 @@
                             {{> idname}}
                             <br>
                             <b>mutual friends:</b>                            
-                                <ul>
-                                    {{#each mutual_friends}}
-                                    <li>
-                                        {{> idname}}
-                                        <br>
-                                        {{!-- <b>mutual friends:</b> --}}                                        
-                                            <ul>
-                                                {{#each mutual_friends}}
-                                                <b>mutual friends:</b>
-                                                <li>
-                                                    {{> idname}}
-                                                </li>
-                                                {{/each}}
-                                            </ul>                                        
-                                    </li>
-                                    {{/each}}
-                                </ul>                            
-                        </li>                            
+                            <ul>
+                                {{#each mutual_friends}}
+                                <li>
+                                    {{> idname}}
+                                    <br>                                                                           
+                                    <ul>
+                                        {{#each mutual_friends}}
+                                        <b>mutual friends:</b>
+                                        <li>
+                                            {{> idname}}
+                                        </li>
+                                        {{/each}}
+                                    </ul>                                        
+                                </li>
+                                {{/each}}
+                            </ul>                            
+                        </li>
+                        {{> group}}                             
                     {{/each}}
-                </ul>                   
-            <b>Groups:</b>     
+                </ul>            
             {{> group}}            
         </li>
         {{/each}}

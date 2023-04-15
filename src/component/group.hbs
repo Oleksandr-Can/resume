@@ -1,6 +1,7 @@
-{{!-- {{#unless group}} --}}
-{{!-- <b>Groups:</b> --}}
 <dir>
+    {{#if groups}}
+        <b>Groups:</b>
+    {{/if}}
     <ul>
         {{#each groups}}        
             <li>
@@ -21,4 +22,3 @@
         {{/each}}
     </ul>
 </dir>
-{{!-- {{/unless}} --}}
