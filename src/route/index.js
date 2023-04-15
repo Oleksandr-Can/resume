@@ -653,7 +653,6 @@ router.get('/web', function (req, res) {
 
 // ================================================================
 
-
 // router.get Створює нам один ентпоїнт
 
 router.get('/mac', function (req, res) {
@@ -736,6 +735,11 @@ router.get('/mac', function (req, res) {
         {
           name: 'USB-C to USB Adapter',
           price: 19.99,
+        },
+      ],
+    },
+  })
+})
 
 // ================================================================
 
@@ -1142,7 +1146,6 @@ router.get('/task31', function (req, res) {
         {
           name: 'Stark Industries',
           link: 'https://www.starkindustries.com/',
-
         },
       ],
     },
@@ -1151,7 +1154,6 @@ router.get('/task31', function (req, res) {
 })
 
 // ================================================================
-
 
 // ================================================================
 
