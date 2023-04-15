@@ -1,24 +1,22 @@
-<dir>
-    {{#if groups}}
-        <b>Groups:</b>
-    {{/if}}
-    <ul>
-        {{#each groups}}        
-            <li>
-                <b>#</b> - {{id}}
-                <br>
-                <b>description:</b>
-                - {{description}}
-                <br>
-                <b>members:</b>
-                <ul>
-                    {{#each members}}
-                        <li>
-                            {{>idname}}
-                        </li>
-                    {{/each}}
-                </ul>
-            </li>got 
-        {{/each}}
-    </ul>
-</dir>
+{{#if groups}}
+    <b>Groups:</b>
+{{/if}}
+<ul>
+    {{#each groups}}        
+        <li>
+            <b>#</b> - {{id}}
+            <br>
+            <b>description:</b>
+            - {{description}}
+            <br>
+            <b>members:</b>
+            <ul>
+                {{#each members}}
+                    <li>
+                        {{>idname}}
+                    </li>
+                {{/each}}
+            </ul>
+        </li>
+    {{/each}}
+</ul>
