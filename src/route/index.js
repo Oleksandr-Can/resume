@@ -657,7 +657,6 @@ router.get('/web', function (req, res) {
 
 // router.get Створює нам один ентпоїнт
 
-
 router.get('/car', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -752,7 +751,10 @@ router.get('/car', function (req, res) {
         premium_paint: 595,
       },
       total: 28990,
-=======
+    },
+  })
+})
+
 //           ↙ тут вводимо шлях (PATH) до сторінки
 
 router.get('/task22', function (req, res) {
@@ -1156,7 +1158,6 @@ router.get('/task31', function (req, res) {
           link: 'https://www.starkindustries.com/',
         },
       ],
-
     },
   })
   //                  ↑↑ сюди вводимо JSON дані
