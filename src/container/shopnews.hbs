@@ -1,0 +1,56 @@
+<main>
+  <div class='ps-5 pt-5'>
+    <div class='breadcrumb'>
+      <div class='nav'>
+        {{#each breadcrumb}}
+          <div class='breadcrumb-item'>
+            <div class='nav-item'>
+              {{#unless url}}
+                <a
+                  href='{{url}}'
+                  class='nav-link disabled'
+                >{{name}}</a>
+              {{else}}
+                <a
+                  href='{{url}}'
+                  class='nav-link'
+                >{{name}}</a>
+              {{/unless}}
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+
+    <div>
+      {{#with newsData}}
+        <img src='{{photo}}' />
+        {{#with head}}
+          <h3 class='pt-4'>
+            {{heading}}
+          </h3>
+          <p>{{description}}</p>
+        {{/with}}
+
+        {{#each body}}
+          <h4 class='pt-4'>
+            {{title}}
+          </h4>
+          <p>{{text}}</p>
+        {{/each}}
+      {{/with}}
+    </div>
+
+    <div class='p-2'>
+      {{#with newsOtherBlock}}
+        <h2 class='m-3 text-center'>{{title}}</h2>
+        <div class='row g-2'>
+          {{>shoppost}}
+        </div>
+      {{/with}}
+    </div>
+
+    {{>shopaction }}
+
+  </div>
+</main>

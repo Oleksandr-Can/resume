@@ -17,3 +17,8 @@ nav {
 section {
   padding: 16px;
 } */
+
+.f_word span {
+  color: red;
+  font-weight: bold;
+}
