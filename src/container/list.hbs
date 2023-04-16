@@ -1,0 +1,70 @@
+<div class='p-5'>
+  <ul>
+    {{#each list}}
+      <li>
+        {{#if @last}} <button>{{name}}</button> {{/if}}
+        <span>{{name}}</span>
+      </li>
+    {{/each}}
+  </ul>
+</div>
+
+<div class='p-5'>
+  <ul>
+    {{#each list}}
+      <li>
+        <button{{#if @last}}
+            disabled
+          {{/if}}>{{name}}</button>
+      </li>
+    {{/each}}
+  </ul>
+</div>
+
+<div class='p-5'>
+  <ul>
+    {{#each list}}
+      <li>
+        <button{{#if @last}}
+            disabled
+          {{/if}}>{{name}} -{{@index}}</button>
+      </li>
+    {{/each}}
+  </ul>
+</div>
+
+<div class='p-5'>
+  <ul>
+    {{#each user}}
+    <li>
+      {{this}}
+      </li>
+    {{/each}}
+  </ul>
+</div>
+
+<div class='p-5'>
+  <ul>
+    {{#each member}}
+    <li>
+        {{@index}}
+      {{#if value}}
+        {{value}}
+      {{else}}
+        {{text}}
+      {{/if}}
+      </li>
+    {{/each}}
+  </ul>
+</div>
+
+<div class='p-5'>
+  <ul>
+    {{#each member}}
+    <li>
+        {{@key}}: {{#if value}}{{value}}{{else}}{{text}}{{/if}},
+      </li>
+    {{/each}}
+    
+  </ul>
+</div>

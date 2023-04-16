@@ -2,7 +2,7 @@ html {
   max-width: 720px;
 }
 
-body {
+/* body {
   margin: 32px;
   background: #fff;
 }
@@ -16,4 +16,9 @@ nav {
 
 section {
   padding: 16px;
+} */
+
+.f_word span {
+  color: red;
+  font-weight: bold;
 }

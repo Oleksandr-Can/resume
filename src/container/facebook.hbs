@@ -1,0 +1,50 @@
+<div class="p-5">
+  <section>
+    <h2>{{name}}</h2>
+    <hr />
+  </section>
+  <dir>
+    <ul>
+        {{#each users}}
+        <li>
+            {{> idname}} 
+            <br>         
+            <b>Friends:</b>            
+                {{!-- <ul> --}}
+                    {{#each friends}}  
+                        <li>         
+                            {{> idname}}
+                            <br>
+                            <b>mutual friends:</b>                            
+                            <ul>
+                                {{#each mutual_friends}}
+                                <li>
+                                    {{> idname}}
+                                    <br>                                                                           
+                                    <ul>
+                                        {{#each mutual_friends}}
+                                        <b>mutual friends:</b>
+                                        <li>
+                                            {{> idname}}
+                                        </li>
+                                        {{/each}}
+                                    </ul>                                        
+                                </li>
+                                {{/each}}
+                            </ul>                            
+                        </li>
+                        {{!-- {{> group}}             --}}
+                        
+                    {{/each}}
+                {{!-- </ul>                 --}}
+            {{#each friends}}
+            {{> group}}                 
+            {{/each}}
+            
+            {{> group}} 
+            <br>           
+        </li>
+        {{/each}}
+    </ul>
+  </dir>
+</div>
