@@ -1,0 +1,75 @@
+<div>
+  <main>
+    <h1>{{name}}</h1>
+    <hr />
+    <dir>
+      <p><strong>Description: </strong><em
+        >{{description}}</em></p>
+      {{#with history}}
+        <b>Сreated: </b>{{year}}, by
+        <U>{{founder}}</U>
+      {{/with}}
+    </dir>
+    <hr />
+    <dir>
+      <b>Type data:</b>
+      {{#each types}}
+        <span class='badge text-bg-dark'>{{this}}</span>
+      {{/each}}
+    </dir>
+    <hr>
+    <dir>
+      <b>Syntax:</b>
+      <dir>
+        {{#with syntax}}
+          <i>variables:</i>
+          {{> syntaxjs syn=variables}}
+          <br>
+          <i>functions:</i>
+          {{> syntaxjs syn=functions}}
+          <br>
+          <i>conditionals:</i>
+          {{> syntaxjs syn=conditionals}}
+          <br>
+          <i>loops:</i>
+          {{> syntaxjs syn=loops}}
+          <br>
+          <i>classes:</i>
+          {{> syntaxjs syn=classes}}          
+        {{/with}}
+      </dir>
+    </dir>
+    <hr>
+    <dir>
+        <b>Features:</b>
+        {{#each features}}
+            <span class="badge rounded-pill text-bg-info">{{this}}</span>
+        {{/each}}
+    </dir>
+    <hr>
+     <dir>
+        <b>Libraries:</b>
+        {{#each features}}
+            <span class="badge rounded-pill text-bg-info">{{this}}</span>
+        {{/each}}
+    </dir>
+    <hr>
+    <dir>
+        <b>Tools:</b>
+        {{#each features}}
+            <span class="badge rounded-pill text-bg-info">{{this}}</span>
+        {{/each}}
+    </dir>
+    <hr>
+    <dir>
+        <b>Community:</b>
+        <dir>
+        {{#each community}}
+        <span class="badge rounded-pill text-bg-primary">{{name}}</span> -
+        <span class="badge rounded-pill text-bg-success">{{type}}</span>
+            <br>
+        {{/each}}
+        </dir>
+    </dir>
+  </main>
+</div>
