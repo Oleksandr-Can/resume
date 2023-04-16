@@ -1,0 +1,203 @@
+<div>
+  <main>
+    <h1> {{name}}</h1>
+    <hr />
+    <b><i>{{description}}</i></b>
+    <dir>
+      <b>Price:</b>
+      {{price}}
+      <br />
+      <b>Category:</b>
+      <span
+        class='badge rounded-pill text-bg-secondary'
+      >{{category}}</span>
+      <hr />
+      {{#with features}}
+        <h2>Processor</h2>
+        {{#with processor}}
+          <dir>
+            <b>brand:</b>
+            -
+            <i>{{brand}}</i>
+            <br />
+            <b>model:</b>
+            -
+            <i>{{model}}</i>
+            <br />
+            <b>speed:</b>
+            -
+            <i>{{speed}}</i>
+            <br />
+            <b>cores:</b>
+            -
+            <i>{{cores}}</i>
+            <br />
+            <b>cache:</b>
+            -
+            <i>{{cache}}</i>
+          </dir>
+        {{/with}}
+
+        <h2>Memory</h2>
+        {{#with memory}}
+          <dir>
+            <b>type:</b>
+            -
+            <i>{{type}}</i>
+            <br />
+            <b>size:</b>
+            -
+            <i>{{size}}</i>
+            <br />
+            <b>speed:</b>
+            -
+            <i>{{speed}}</i>
+          </dir>
+        {{/with}}
+        <h2>Storage</h2>
+        {{#with storage}}
+          <dir>
+            <b>type:</b>
+            -
+            <i>{{type}}</i>
+            <br />
+            <b>size:</b>
+            -
+            <i>{{size}}</i>
+          </dir>
+        {{/with}}
+
+        <h2>Display</h2>
+        {{#with display}}
+          <dir>
+            <b>size:</b>
+            -
+            <i>{{size}}</i>
+            <br />
+            <b>resolution:</b>
+            -
+            <i>{{resolution}}</i>
+            <br />
+            <b>memory:</b>
+            -
+            <i>{{memory}}</i>
+            <br />
+            <b>color space:</b>
+            -
+            <i>{{color_space}}</i>
+            <br />
+            <b>brightness:</b>
+            -
+            <i>{{brightness}}</i>
+            <br />
+            <b>refreshrate:</b>
+            -
+            <i>{{refresh_rate}}</i>
+          </dir>
+        {{/with}}
+
+        <h2>Graphics</h2>
+        {{#with graphics}}
+          <dir>
+            <b>brand:</b>
+            -
+            <i>{{brand}}</i>
+            <br />
+            <b>model:</b>
+            -
+            <i>{{model}}</i>
+            <br />
+            <b>memory:</b>
+            -
+            <i>{{memory}}</i>
+          </dir>
+        {{/with}}
+
+        <h2>Ports</h2>
+        {{#each ports}}
+          <dir>
+            <b>type:</b>
+            -
+            <i>{{type}}</i>
+            <br />
+            <b>count:</b>
+            -
+            <i>{{count}}</i>
+            <br />
+            <b>features:</b>
+            <dir>
+              {{#each features}}
+                {{#unless features}}
+                  <i>{{this}}</i>
+                  <br />
+                {{else}}
+                  <i>no data</i>
+                {{/unless}}
+              {{/each}}
+            </dir>
+          </dir>
+        {{/each}}
+
+        <h2>Batterys</h2>
+        {{#with battery}}
+          <dir>
+            <b>type:</b>
+            -
+            <i>{{type}}</i>
+            <br />
+            <b>capacity:</b>
+            -
+            <i>{{capacity}}</i>
+            <br />
+            <b>life:</b>
+            -
+            <i>{{life}}</i>
+          </dir>
+        {{/with}}
+
+        <h2>Weight</h2>
+        <dir>
+          <b>weight:</b>
+          -
+          {{weight}}
+        </dir>
+
+        <h2>Dimensions</h2>
+        {{#with dimensions}}
+          <dir>
+            <b>height:</b>
+            -
+            <i>{{height}}</i>
+            <br />
+            <b>width:</b>
+            -
+            <i>{{width}}</i>
+            <br />
+            <b>depth:</b>
+            -
+            <i>{{depth}}</i>
+          </dir>
+        {{/with}}
+
+        <h2>Operating system</h2>
+        <dir>
+          <b>operating system:</b>
+          -
+          {{operating_system}}
+        </dir>
+
+        <h2>Accessories</h2>
+        <lu>
+          <dir>
+            {{#each accessories}}
+              <li>
+                <i>{{name}}</i>
+                - price: ({{price}})
+              </li>
+            {{/each}}
+          </dir>
+        </lu>
+      {{/with}}
+    </dir>
+  </main>
+</div>
