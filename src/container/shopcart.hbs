@@ -1,0 +1,113 @@
+<main class='ps-5 mb-5'>
+  {{! *****Header***** }}  
+  <div class='pb-5 pt-5'>
+    {{#with header}}
+      <h1 class='pb-3'>{{title}}</h1>
+      {{#with button}}
+        <a
+          href='{{link}}'
+          class='btn btn-outline-dark'
+        >{{text}}</a>
+      {{/with}}
+    {{/with}}
+
+  </div>
+  <div class='py-4'><hr /></div>
+
+  {{! *****goodsBlock**** }}
+  <div>
+    {{#each goodsBlock}}
+    {{> cartGoodsItem}}
+      {{!-- <div class='card pb-2 mt-2'>
+        <div class='row'>
+          <div class='col-2 pt-2'>
+            <img src='{{image}}' class='img-thumbnail' />
+          </div>
+          <div class='col-4 pt-2'>
+            <p><h6>{{name}}</h6></p>
+            <p>{{description}}</p>
+          </div>
+          <div class='col-2 pt-2'>
+            <br />
+            {{#with price}}
+              <p>{{title}}:</p>
+              <h5>{{value}}</h5>
+            {{/with}}
+          </div>
+          <div class='col-2 pt-2'>
+            <br />
+            <br />
+            <h5>{{amount}}</h5>
+          </div>
+          <div class='col-2 pt-2 ms-0'>
+            {{#each buttons}}
+              <div class='pt-3 pb-1'>
+                {{#if isPrimary}}
+                  <button
+                    class='btn btn-primary'
+                  >{{text}}</button>
+                {{/if}}
+              </div>
+              {{#if isDanger}}
+                <button
+                  class='btn btn-outline-danger fs-6'
+                >{{text}}</button>
+              {{/if}}
+            {{/each}}
+          </div>
+        </div>
+      </div> --}}
+    {{/each}}
+  </div>
+  <div class='py-4'><hr /></div>
+
+  {{! *****total**** }}
+  <div>
+    {{#with total}}
+      <div>
+        <h3>{{title}}</h3>
+      </div>
+      <div><h2>{{amount}}</h2></div>
+      <div>{{delivery}}</div>
+      <div>
+        {{#each buttons}}
+          <div class='pt-3 pb-1'>
+            {{#if isSuccess}}
+              <a
+                href='{{link}}'
+                class='btn btn-success'
+              >{{text}}</a>
+            {{/if}}
+          </div>
+          {{#if isOutline}}
+            <a
+              href='{{link}}'
+              class='btn btn-outline-success'
+            >{{text}}</a>
+          {{/if}}
+        {{/each}}
+      </div>
+    {{/with}}
+  </div>
+  <div class='py-4'><hr /></div>
+
+    {{!-- *****goodsOtherBlock**** --}}
+  <div>
+    {{#with goodsOtherBlock}}
+        <div class="text-center pb-5">
+            <h3>{{title}}</h3>
+        </div>        
+        <div class='row g-2'>
+            {{> shopcard}}
+        </div>
+    {{/with}}
+  </div>
+  <div class='py-4'><hr /></div>
+
+    {{!-- *****subscribe***** --}}
+  <div>
+    {{> shopsubscribe}}
+  </div>
+  <div class='pt-4'><hr /></div>
+
+</main>
