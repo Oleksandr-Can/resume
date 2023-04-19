@@ -139,19 +139,65 @@
                 <div><h2>{{title}}</h2></div>
                 {{#with select}}
                     {{#with availabel_coupon}}
-                       {{> selectmenu}} 
+                       <div class="mb-2">
+                        <div> <label class='ms=0 fs-5'>{{label}} </label></div>
+                        <select class='form-select form-select-lg' />
+                        <option selected>{{placeholder}}</option>
+                            {{#each options}}
+                                {{#with this}}
+                                    <option value="{{value}}">{{text}}</option>
+                                {{/with}}
+                            {{/each}}
+                        </select> 
+                        {{#if caption}}
+                        <div class='form-text'>{{caption}}</div>
+                        {{/if}}
+                        </div>
                     {{/with}}
                     {{#with friend_coupon}}
-                       {{> selectmenu}} 
+                       <div class="mb-2">
+                        <div> <label class='ms=0 fs-5'>{{label}} </label></div>
+                        <select class='form-select form-select-sm' />
+                        <option selected>{{placeholder}}</option>
+                            {{#each options}}
+                                {{#with this}}
+                                    <option value="{{value}}">{{text}}</option>
+                                {{/with}}
+                            {{/each}}
+                        </select> 
+                        {{#if caption}}
+                        <div class='form-text'>{{caption}}</div>
+                        {{/if}}
+                        </div>
                     {{/with}}
                 {{/with}}
                 {{#with add}}
                     {{#with friend}}
-                        {{> shopoderinput}}
+                        <div class='mb-2'>
+                        <div> <label class='ms=0 fs-5'>{{label}} </label></div>
+                        <div class='input-group input-group-lg'>
+                            <input class='form-control' placeholder='{{placeholder}}' />
+                        </div>
+                        {{#if caption}}
+                            <div class='form-text'>{{caption}}</div>
+                        {{/if}}
+                        </div>
                     {{/with}}
-                    {{#with colleague}}
-                        {{> shopoderinput}}
-                    {{/with}}
+                    {{!-- <div class="row"> --}}
+                    <div class="col-10">
+                        {{#with colleague}}
+                            <div class='mb-2'>
+                            <div> <label class='ms=0 fs-5'>{{label}} </label></div>
+                            <div class='input-group input-group-sm'>
+                                <input class='form-control' placeholder='{{placeholder}}' />
+                            </div>
+                            {{#if caption}}
+                                <div class='form-text'>{{caption}}</div>
+                            {{/if}}
+                            </div>
+                        {{/with}}
+                    </div>
+                    {{!-- </div> --}}
                 {{/with}}
             {{/with}}
          </div>
