@@ -1,0 +1,105 @@
+<main class='ps-5'>
+
+  *****purchase****
+  <div>
+    <div>
+      <p><h1>{{header}}</h1></p>
+    </div>
+    <div>
+      {{#with purchase}}
+        <div class='pb-4'>
+          <div class='nav nav-tabs'>
+            {{#each tabs}}
+              {{#if @first}}
+                <div class='nav-item'>
+                  <a href='#' class='nav-link active'><h5
+                    >{{this}}</h5></a>
+                </div>
+              {{else}}
+                <a href='#' class='nav-link'><h6
+                  >{{this}}</h6></a>
+              {{/if}}
+            {{/each}}
+          </div>
+        </div>
+        <div>
+          {{#with actionBlock}}
+            <div class='row g-2'>
+              <div class='col-4'>
+                {{#with input}}
+                  <input
+                    type='text'
+                    class='form-control'
+                    placeholder='{{placeholder}}'
+                  />
+                {{/with}}
+              </div>
+              <div class='col-8 ps-1'>
+                {{#each buttons}}
+                  {{#if isSuccess}}
+                    <a
+                      href='{{link}}'
+                      class='btn btn-success'
+                    >{{text}}</a>
+                  {{/if}}
+                  {{#if isOutline}}
+                    <a
+                      href='{{link}}'
+                      class='btn btn-outline-success'
+                    >{{text}}</a>
+                  {{/if}}
+                  {{#if isDanger}}
+                    <a
+                      href='{{link}}'
+                      class='btn btn-outline-danger'
+                    >{{text}}</a>
+                  {{/if}}
+                {{/each}}
+              </div>
+            </div>
+          {{/with}}
+        </div>
+        <div class='py-3'><hr
+            style='border-width: 2px;'
+          /></div>
+        <div>
+          {{! <div class='row'> }}
+          {{#each itemList}}
+            <div class='row'>
+              <div class='col-3'>
+                {{#with this}}
+                  <div>
+                    {{number}}
+                  </div>
+                  <div>
+                    <h5>{{status}}</h5>
+                  </div>
+                {{/with}}
+              </div>
+              <div class='col-2 text-center'>
+                {{#with amount}}
+                  <div>{{title}}</div>
+                  <div><h5>{{value}}</h5></div>
+                {{/with}}
+              </div>
+              <div class='col-4'>
+                <div class='row'>                  
+                  {{#each images}}
+                    <div class='col-4'>
+                      <img
+                        src='{{this}}'
+                        class='img rounded m-1'
+                      />
+                    </div>
+                  {{/each}}                  
+                </div>
+              </div>
+            </div>
+          {{/each}}
+
+        </div>
+      {{/with}}
+    </div>
+  </div>
+
+</main>
