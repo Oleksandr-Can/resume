@@ -1,4 +1,4 @@
-<div class='pt-5'><hr style='border-width: 2px;' /></div>
+<div class='pt-5 ps-5'><hr style='border-width: 2px;' /></div>
 <div class='ps-5'>
   <div class='row mt-5'>
     {{#each footer}}
@@ -7,19 +7,13 @@
           {{#if @last}}
             <ul class='nav p-0 m-0'>
               <li class='nav-item m-0 p-0'>
-                <a
-                  href='{{link}}'
-                  class='nav-link disabled'
-                >{{text}}</a>
+                <a href='{{link}}' class='nav-link disabled'>{{text}}</a>
               </li>
             </ul>
           {{else}}
             <ul class='nav p-0 m-0'>
               <li class='nav-item m-0 p-0'>
-                <a
-                  href='{{link}}'
-                  class='nav-link'
-                >{{text}}</a>
+                <a href='{{link}}' class='nav-link'>{{text}}</a>
               </li>
             </ul>
           {{/if}}
