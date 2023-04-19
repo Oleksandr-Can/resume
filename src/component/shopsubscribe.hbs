@@ -1,0 +1,19 @@
+<div class='card text-bg-dark'>
+  <div class='card-body'>
+    {{#with subscribe}}
+      <h2>
+        {{header}}
+      </h2>
+      <p>{{description}}</p>
+
+      {{#each buttons}}
+        <div class='ms-0 mb-2'>
+          <a
+            href='{{link}}'
+            class='btn btn-primary'
+          >{{text}}</a>
+        </div>
+      {{/each}}
+    {{/with}}
+  </div>
+</div>
