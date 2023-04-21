@@ -47,9 +47,105 @@ router.get('/', function (req, res) {
     page: {
       title: 'Resume project',
     },
+    resume: {
+      summary: {
+        name: 'Summary',
+        href: '/summary',
+      },
+      skills: {
+        name: 'Skills',
+        href: '/skills',
+      },
+      education: {
+        name: 'Education',
+        href: '/education',
+      },
+      work: {
+        name: 'Work',
+        href: '/work',
+      },
+    },
+    typesetting: {
+      person: {
+        name: 'Person',
+        href: '/person',
+      },
+      bio: {
+        name: 'Bio',
+        href: '/bio',
+      },
+      program: {
+        name: 'Program',
+        href: '/program',
+      },
+      web: {
+        name: 'Web',
+        href: '/web',
+      },
+      mac: {
+        name: 'Mac',
+        href: '/mac',
+      },
+      js: {
+        name: 'js',
+        href: '/js',
+      },
+      car: {
+        name: 'Car',
+        href: '/car',
+      },
+      facebook: {
+        name: 'Facebook',
+        href: '/facebook',
+      },
+    },
+    bootstrap: {
+      task1: {
+        name: 'task1',
+        href: '/task21',
+      },
+      task2: {
+        name: 'task2',
+        href: '/task22',
+      },
+      task3: {
+        name: 'task3',
+        href: '/task31',
+      },
+    },
+    shop: {
+      shophome: {
+        name: 'Shophome',
+        href: '/shophome',
+      },
+      shopproduct: {
+        name: 'Shopproduct',
+        href: '/shopproduct',
+      },
+      shopnews: {
+        name: 'Shopnews',
+        href: '/shopnews',
+      },
+      shoporder: {
+        name: 'Shoporder',
+        href: '/shoporder',
+      },
+      shopcart: {
+        name: 'Shopcart',
+        href: '/shopcart',
+      },
+      shopprofile: {
+        name: 'Shopprofile',
+        href: '/shopprofile',
+      },
+      shopreview: {
+        name: 'Shopreview',
+        href: '/shopreview',
+      },
+    },
   })
-  //                  ↑↑ сюди вводимо JSON дані
 })
+//                  ↑↑ сюди вводимо JSON дані
 
 // ================================================================
 

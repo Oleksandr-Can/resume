@@ -8,32 +8,55 @@
       можна написати будь-який текст</p>
   </div>
 
-  <div class='pt-5 pb-3'>
-    <a
-      href='/skills'
-      target='_blank'
-      class='btn btn-primary'
-      style='padding: 7px 29px;'
-    >Skills</a>
+  
+  <div class="pt-5">
+    <h3>Resume</h3>
+    {{#with resume}}
+    <div class="py-2">{{> button data=summary}}</div>
+    <div class="py-2">{{> button data=skills}}</div>
+    <div class="py-2">{{> button data=education}}</div>
+    <div class="py-2">{{> button data=work}}</div>
+    {{/with}}
   </div>
-  <div class='pb-3'>
-    <a
-      href='/summary'
-      target='_blank'
-      class='btn btn-primary'
-      style='padding: 7px 14px;'
-    >Summary</a>
+
+   <div class="pt-5">
+    <h3>Typesetting</h3>
+    {{#with typesetting}}
+    {{> button data=person}}
+    {{> button data=bio}}
+    {{> button data=program}}
+    {{> button data=web}}
+    {{> button data=mac}}
+    {{> button data=js}}
+    {{> button data=car}}
+    {{> button data=facebook}}    
+    {{/with}} 
   </div>
-  <div class='pb-3'>
-    <a href='/education' class='btn btn-primary'>Education</a>
+
+   <div class="pt-5">
+    <h3>Bootstrap</h3>
+    {{#with bootstrap}}
+    {{> button data=task1}}
+    {{> button data=task2}}
+    {{> button data=task3}}     
+    {{/with}} 
   </div>
-  <div class='pb-3'>
-    <a
-      href='/work'
-      target='_blank'
-      class='btn btn-primary'
-      style='padding: 7px 28px;'
-    >Work</a>
+
+  <div class="pt-5 pb-5">
+    <h3>Shop</h3>
+    {{#with shop}}
+    {{> button data=shophome}}
+    {{> button data=shopproduct}}
+    {{> button data=shopnews}} 
+    {{> button data=shoporder}}
+    {{> button data=shopcart}}
+    {{> button data=shopprofile}} 
+    {{> button data=shopreview}}     
+    {{/with}} 
   </div>
+  
+
+ 
+ 
 
 </main>
