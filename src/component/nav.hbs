@@ -1,6 +1,33 @@
-<nav>
+{{!-- <nav>
     {{> link text="Skills" href="/skills" line=true }}
     {{> link text="Summary" href="/summary" line=true }}
     {{> link text="Education" href="/education" line=true }}
     {{> link text="Work" href="/work" line=true noLine=true}}        
-</nav>
+</nav> --}}
+<div class='card'>
+  <nav class='nav ms=0'>
+    {{#if summary}}
+      <a class='nav-link fs-4 disabled' href='/summary'>Summary</a>
+    {{else}}
+      <a class='nav-link fs-4' href='/summary'>Summary</a>
+    {{/if}}
+
+    {{#if skills}}
+      <a class='nav-link fs-4 disabled' href='/skills'>Skills</a>
+    {{else}}
+      <a class='nav-link fs-4' href='/skills'>Skills</a>
+    {{/if}}
+
+    {{#if education}}
+      <a class='nav-link fs-4 disabled' href='/education'>Education</a>
+    {{else}}
+      <a class='nav-link fs-4' href='/education'>Education</a>
+    {{/if}}
+
+    {{#if work}}
+      <a class='nav-link fs-4 disabled' href='/work'>Work</a>
+    {{else}}
+      <a class='nav-link fs-4' href='/work'>Work</a>
+    {{/if}}
+  </nav>
+</div>

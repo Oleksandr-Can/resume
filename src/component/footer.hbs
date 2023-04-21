@@ -1,3 +1,4 @@
+<div>
 {{#with footer}}
     <footer>
         <hr class="my-5">
@@ -5,19 +6,30 @@
         <div>
             {{#with social}}
 
-                {{> link text=email.text href=email.href blank=true }}
+                {{!-- {{> link text=email.text href=email.href blank=true }}
                 {{> link text=phone.text href=phone.href blank=true }}
-                {{> link text=linkedin.text href=linkedin.href blank=true noSlash=true}}
+                {{> link text=linkedin.text href=linkedin.href blank=true noSlash=true}} --}}
+
+                <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{email.href}}" target="_blank">{{email.text}}</a></li>
+                    <li class="breadcrumb-item"><a href="{{phone.href}}" target="_blank">{{phone.text}}</a></li>
+                    <li class="breadcrumb-item"><a href="{{linkedin.href}}" target="_blank">{{linkedin.text}}</a></li>
+                </ol>
+                </nav>
                 
             {{/with}}
         </div>
        
-        <div class="my-3">
+        <div class="card text-bg-secondary my-3 ps-1">
+        <div class="my-2">
             <em>Copyright by {{../header.name.firstname}} {{../header.name.lastname}}</em>
         </div>
         
         <div>
             <address>{{../header.address}}</address>
         </div>
+          </div>
     </footer>
 {{/with}}
+</div>
