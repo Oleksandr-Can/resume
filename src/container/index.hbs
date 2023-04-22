@@ -19,7 +19,20 @@
     {{/with}}
   </div>
 
-   <div class="pt-5">
+
+
+  <h3 class="pt-5">Typesetting</h3>
+  <div class="row">
+    {{#each typesetting}}
+    <div class="col-3 py-2">
+      {{#with this}}
+        {{> buttonSet}}
+      {{/with}}
+      </div>
+    {{/each}}
+    </div>
+  
+   {{!-- <div class="pt-5">
     <h3>Typesetting</h3>
     {{#with typesetting}}
     {{> button data=person}}
@@ -31,7 +44,7 @@
     {{> button data=car}}
     {{> button data=facebook}}    
     {{/with}} 
-  </div>
+  </div> --}}
 
    <div class="pt-5">
     <h3>Bootstrap</h3>
@@ -51,9 +64,20 @@
     {{> button data=shoporder}}
     {{> button data=shopcart}}
     {{> button data=shopprofile}} 
-    {{> button data=shopreview}}     
+    {{> button data=shopreview}}      
     {{/with}} 
   </div>
+
+  {{!-- <h3 class="pt-5">typesetting</h3>
+<div class="row">
+  {{#each typesetting}}
+  <div class="col-4">
+    {{#with this}}
+      {{> buttonShop}}
+    {{/with}}
+    </div>
+  {{/each}}
+  </div> --}}
   
 
  

@@ -65,40 +65,40 @@ router.get('/', function (req, res) {
         href: '/work',
       },
     },
-    typesetting: {
-      person: {
+    typesetting: [
+      {
         name: 'Person',
         href: '/person',
       },
-      bio: {
+      {
         name: 'Bio',
         href: '/bio',
       },
-      program: {
+      {
         name: 'Program',
         href: '/program',
       },
-      web: {
+      {
         name: 'Web',
         href: '/web',
       },
-      mac: {
+      {
         name: 'Mac',
         href: '/mac',
       },
-      js: {
+      {
         name: 'js',
         href: '/js',
       },
-      car: {
+      {
         name: 'Car',
         href: '/car',
       },
-      facebook: {
+      {
         name: 'Facebook',
         href: '/facebook',
       },
-    },
+    ],
     bootstrap: {
       task1: {
         name: 'task1',
@@ -126,7 +126,7 @@ router.get('/', function (req, res) {
         name: 'Shopnews',
         href: '/shopnews',
       },
-      shoporder: {
+      shopnews: {
         name: 'Shoporder',
         href: '/shoporder',
       },
