@@ -41,9 +41,111 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
-  //                  ↑↑ сюди вводимо JSON дані
+  res.render('index', {
+    layout: 'index',
+    header,
+    page: {
+      title: 'Resume project',
+    },
+    resume: {
+      summary: {
+        name: 'Summary',
+        href: '/summary',
+      },
+      skills: {
+        name: 'Skills',
+        href: '/skills',
+      },
+      education: {
+        name: 'Education',
+        href: '/education',
+      },
+      work: {
+        name: 'Work',
+        href: '/work',
+      },
+    },
+    typesetting: [
+      {
+        name: 'Person',
+        href: '/person',
+      },
+      {
+        name: 'Bio',
+        href: '/bio',
+      },
+      {
+        name: 'Program',
+        href: '/program',
+      },
+      {
+        name: 'Web',
+        href: '/web',
+      },
+      {
+        name: 'Mac',
+        href: '/mac',
+      },
+      {
+        name: 'js',
+        href: '/js',
+      },
+      {
+        name: 'Car',
+        href: '/car',
+      },
+      {
+        name: 'Facebook',
+        href: '/facebook',
+      },
+    ],
+    bootstrap: {
+      task1: {
+        name: 'task1',
+        href: '/task21',
+      },
+      task2: {
+        name: 'task2',
+        href: '/task22',
+      },
+      task3: {
+        name: 'task3',
+        href: '/task31',
+      },
+    },
+    shop: {
+      shophome: {
+        name: 'Shophome',
+        href: '/shophome',
+      },
+      shopproduct: {
+        name: 'Shopproduct',
+        href: '/shopproduct',
+      },
+      shopnews: {
+        name: 'Shopnews',
+        href: '/shopnews',
+      },
+      shopnews: {
+        name: 'Shoporder',
+        href: '/shoporder',
+      },
+      shopcart: {
+        name: 'Shopcart',
+        href: '/shopcart',
+      },
+      shopprofile: {
+        name: 'Shopprofile',
+        href: '/shopprofile',
+      },
+      shopreview: {
+        name: 'Shopreview',
+        href: '/shopreview',
+      },
+    },
+  })
 })
+//                  ↑↑ сюди вводимо JSON дані
 
 // ================================================================
 
@@ -52,6 +154,7 @@ router.get('/summary', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('summary', {
     // ↙ сюди вводимо JSON дані
+    summary: true,
 
     page: {
       title: 'Resume | Summary',
@@ -84,6 +187,8 @@ router.get('/skills', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('skills', {
     // ↙ сюди вводимо JSON дані
+
+    skills: true,
 
     page: {
       title: 'Resume | Skills',
@@ -140,7 +245,7 @@ router.get('/education', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('education', {
     // ↙ сюди вводимо JSON дані
-
+    education: true,
     page: {
       title: 'Resume | Education',
     },
@@ -177,7 +282,7 @@ router.get('/work', function (req, res) {
     // ↙ сюди вводимо JSON дані
 
     layout: 'big',
-
+    work: true,
     page: {
       title: 'Resume | Work',
     },
